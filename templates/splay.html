@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{name}}</title>
+    <link rel="shortcut icon" href="https://picocss.com/favicon.ico">
+    
+    <!-- Pico.css -->
+    <link rel="stylesheet" href="/css/pico.min.css">
+
+    <!-- Custom styles for this example -->
+    <link rel="stylesheet" href="/css/custom.css">
+  </head>
+  
+
+  <body>
+    <!-- Nav -->
+    <nav class="container-fluid">
+      <ul>
+        <h3>{{name}}</h3>
+      </ul>
+    </nav><!-- ./ Nav -->
+
+    <!-- Main -->
+    <main class="container">   
+      <div id="dplayer"></div>
+      <script src="/js/DPlayer.min.js"></script>
+      <script> 
+      const dp = new DPlayer({
+          container: document.getElementById('dplayer'),
+          video: {
+              url: '{{spurl}}',
+          },
+      });
+      </script>
+    </main><!-- ./ Main -->
+
+    <!-- Footer -->
+    <footer class="container-fluid">
+      <small>Copyright © 2022 咕之番. All rights reserved.</small>
+    </footer><!-- ./ Footer -->
+
+    <!-- Minimal theme switcher -->
+    <script src="../js/minimal-theme-switcher.js"></script>
+
+  </body>
+
+</html>
